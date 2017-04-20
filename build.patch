@@ -1,0 +1,19 @@
+--- jedi-vim-eef60e056a621e256cf4c1c9e91a397b454e3ede/Makefile.org	2017-04-20 02:11:43.609025355 +0000
++++ jedi-vim-eef60e056a621e256cf4c1c9e91a397b454e3ede/Makefile	2017-04-20 02:13:53.969740260 +0000
+@@ -1,6 +1,3 @@
+-test:
+-	py.test
+-
+ build:
+ 	mkdir $@
+ build/vint: | build
+@@ -12,5 +12,9 @@
+ 
+ clean:
+ 	rm -rf .cache build
++	
++install:
++	mkdir -p $(DESTDIR)/usr/share/vim/vimfiles
++	cp -ar initialize.py jedi_vim.py after autoload ftplugin plugin $(DESTDIR)/usr/share/vim/vimfiles
+ 
+ .PHONY: test check clean

@@ -13,7 +13,7 @@
  	rm -rf .cache build
 +	
 +install:
-+	mkdir -p $(DESTDIR)/usr/share/vim/vimfiles
-+	cp -ar initialize.py jedi_vim.py after autoload ftplugin plugin $(DESTDIR)/usr/share/vim/vimfiles
++	mkdir -p $(DESTDIR)/usr/share/vim/vim80
++	cp -ar initialize.py jedi_vim.py after autoload ftplugin plugin $(DESTDIR)/usr/share/vim/vim80
  
  .PHONY: test check clean

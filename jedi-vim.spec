@@ -4,7 +4,7 @@
 #
 Name     : jedi-vim
 Version  : 60056621256419913974543
-Release  : 1
+Release  : 2
 URL      : https://github.com/davidhalter/jedi-vim/archive/eef60e056a621e256cf4c1c9e91a397b454e3ede.tar.gz
 Source0  : https://github.com/davidhalter/jedi-vim/archive/eef60e056a621e256cf4c1c9e91a397b454e3ede.tar.gz
 Summary  : No detailed summary available
@@ -38,11 +38,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1492654616
+export SOURCE_DATE_EPOCH=1492655218
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1492654616
+export SOURCE_DATE_EPOCH=1492655218
 rm -rf %{buildroot}
 %make_install
 
@@ -51,15 +51,15 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/vim/vimfiles/after/ftplugin/python/jedi.vim
-/usr/share/vim/vimfiles/after/syntax/python.vim
-/usr/share/vim/vimfiles/autoload/health/jedi.vim
-/usr/share/vim/vimfiles/autoload/jedi.vim
-/usr/share/vim/vimfiles/ftplugin/python/jedi.vim
-/usr/share/vim/vimfiles/initialize.py
-/usr/share/vim/vimfiles/initialize.pyc
-/usr/share/vim/vimfiles/initialize.pyo
-/usr/share/vim/vimfiles/jedi_vim.py
-/usr/share/vim/vimfiles/jedi_vim.pyc
-/usr/share/vim/vimfiles/jedi_vim.pyo
-/usr/share/vim/vimfiles/plugin/jedi.vim
+/usr/share/vim/vim80/after/ftplugin/python/jedi.vim
+/usr/share/vim/vim80/after/syntax/python.vim
+/usr/share/vim/vim80/autoload/health/jedi.vim
+/usr/share/vim/vim80/autoload/jedi.vim
+/usr/share/vim/vim80/ftplugin/python/jedi.vim
+/usr/share/vim/vim80/initialize.py
+/usr/share/vim/vim80/initialize.pyc
+/usr/share/vim/vim80/initialize.pyo
+/usr/share/vim/vim80/jedi_vim.py
+/usr/share/vim/vim80/jedi_vim.pyc
+/usr/share/vim/vim80/jedi_vim.pyo
+/usr/share/vim/vim80/plugin/jedi.vim

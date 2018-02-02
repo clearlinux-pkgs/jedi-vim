@@ -4,7 +4,7 @@
 #
 Name     : jedi-vim
 Version  : eef60e056a621e256cf4c1c9e91a397b454e3ede
-Release  : 4
+Release  : 5
 URL      : https://github.com/davidhalter/jedi-vim/archive/eef60e056a621e256cf4c1c9e91a397b454e3ede.tar.gz
 Source0  : https://github.com/davidhalter/jedi-vim/archive/eef60e056a621e256cf4c1c9e91a397b454e3ede.tar.gz
 Summary  : No detailed summary available

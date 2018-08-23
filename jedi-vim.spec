@@ -4,12 +4,13 @@
 #
 Name     : jedi-vim
 Version  : eef60e056a621e256cf4c1c9e91a397b454e3ede
-Release  : 7
+Release  : 8
 URL      : https://github.com/davidhalter/jedi-vim/archive/eef60e056a621e256cf4c1c9e91a397b454e3ede.tar.gz
 Source0  : https://github.com/davidhalter/jedi-vim/archive/eef60e056a621e256cf4c1c9e91a397b454e3ede.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
+Requires: jedi-vim-license
 Requires: jedi-vim-data
 Requires: jedi
 BuildRequires : jedi
@@ -29,6 +30,14 @@ Group: Data
 data components for the jedi-vim package.
 
 
+%package license
+Summary: license components for the jedi-vim package.
+Group: Default
+
+%description license
+license components for the jedi-vim package.
+
+
 %prep
 %setup -q -n jedi-vim-eef60e056a621e256cf4c1c9e91a397b454e3ede
 %patch1 -p1
@@ -38,12 +47,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517684898
+export SOURCE_DATE_EPOCH=1535065695
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1517684898
+export SOURCE_DATE_EPOCH=1535065695
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/jedi-vim
+cp LICENSE.txt %{buildroot}/usr/share/doc/jedi-vim/LICENSE.txt
 %make_install
 
 %files
@@ -51,8 +62,6 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/vim/vim80/__pycache__/initialize.cpython-36.pyc
-/usr/share/vim/vim80/__pycache__/jedi_vim.cpython-36.pyc
 /usr/share/vim/vim80/after/ftplugin/python/jedi.vim
 /usr/share/vim/vim80/after/syntax/python.vim
 /usr/share/vim/vim80/autoload/health/jedi.vim
@@ -61,3 +70,7 @@ rm -rf %{buildroot}
 /usr/share/vim/vim80/initialize.py
 /usr/share/vim/vim80/jedi_vim.py
 /usr/share/vim/vim80/plugin/jedi.vim
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/jedi-vim/LICENSE.txt
